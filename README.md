@@ -148,6 +148,13 @@ Main Thread (UI) : 액티비티와 컴포넌트의 사용을 담당하고 연동
 
 Worker Thread : 네트워크 또는 데이터베이스 쿼리와 같이 오래 걸리는 작업을 처리하는 Thread.
 
+### Handler란
+
+
+
+### Android Service와 Intent Service 차이
+
+
 ### Service와 Thread의 차이점
 Thread는 Main Thread를 블락하지 않기 위한 작업 등으 처리. Foreground.
 
