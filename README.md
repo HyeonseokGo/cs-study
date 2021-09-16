@@ -7,6 +7,11 @@
 
 스레드 : 프로세스 내에서 실행되는 여러 흐름의 단위, 프로세스가 할당받은 자원을 이용함. Stack만 할당 받고 Code, Data, Heap 영역은 공유.
 
+### Queue와 Stack
+Queue : FIFO 방식으로 동작. 프로세스 처리, CPU 관리 등에 사용됨.
+
+Stack : LIFO 방식으로 동작. 제거를 pop, 추가를 push라고 함.
+
 ### Https란
 패킷이 암호화 되어 있기 때문에 보안에 좋음.
 
@@ -33,6 +38,12 @@ getter/setter가 없기 때문에 보일러 플레이트 코드가 줄어듬.
 
 toString(), hashCode(), equals(), copy() 메소드가 기본적으로 구현되어 있음.
 
+### Sealed Class
+abstract 클래스로, 객체 생성 불가능. 생성자는 private. 하위 클래스와 동일한 파일에 정의되어야함.
+
+when을 사용할 때, else 없이 사용할 수 있음.
+
+Enum과의 차이점 : Enum은 Single Instance만 생성 가능.
 
 ### Lambda와 고차 함수
 고차 함수 : 함수를 인수로 받거나, 함수를 리턴하는 함수.
@@ -43,6 +54,9 @@ Lambda : 고차 함수에서 인수로 주어지는 식.
 ## Java
 
 ### GC란?
+유효하지 않은 메모리(참조되지 않는 객체)인 가비지 발생하는데, free()를 사용해 직접 메모리를 해제하는 C언어와 달리, 가비지 컬렉션이 알아서 메모리를 정리해줌.
+
+Stop the world와 Mark and Sweep으로 진행되는데, JVM이 프로그램의 실행을 멈추고 메모리의 사용 여부를 식별한 후 해제하는 작업이다.
 
 ### 객체와 클래스의 차이
 클래스 : 청사진. 
@@ -53,6 +67,19 @@ Lambda : 고차 함수에서 인수로 주어지는 식.
 wrapper 클래스 : 8개의 기본형을 객체 형식으로 다루기 위해 JDK에서 지원하는 8개의 클래스.
 
 기본형 : 객체가 아님.
+
+### Stream
+
+
+### equals()란
+모든 자바 객체의 부모 객체인 Object 클래스에 정의되어 있음. Object에서 equals()는 각 객체가 참조하는 주소가 동일한지 검사하는 형태고 구현되어 있다. 객체의 비교에 사용할 때, 주소값이 아닌 객체의 값으로 비교하기 위해 재정의가 필요함. 재정의함으로써 Map의 Key와 Set의 원소로 사용 가능.
+
+### hashCode()란
+일반적으로 각 객체의 주소값을 반환함. 재정의가 되지 않았을 때 HashMap의 Key로 사용된다면, hashCode() 값이 달라 Key로 검색하지 못한다.
+
+두 객체를 equals()로 판단하였을 때, 동일하다면 hashCode() 값도 동일해야한다. -> 재정의하여 사용.
+
+equals()를 재정의하지 않고 hashCode()만 재정의한다면, 해시값으로 객체의 위치를 찾을 수 있지만 같은 객체인지 비교하지 못하기 때문에 null을 반환한다.
 
 ### String, StringBuffer, StringBuilder
 String : 불변. 값이 수정될 때, 새로운 메모리 영역을 가리킴.
@@ -121,6 +148,17 @@ Main Thread (UI) : 액티비티와 컴포넌트의 사용을 담당하고 연동
 
 Worker Thread : 네트워크 또는 데이터베이스 쿼리와 같이 오래 걸리는 작업을 처리하는 Thread.
 
+### Service와 Thread의 차이점
+Thread는 Main Thread를 블락하지 않기 위한 작업 등으 처리. Foreground.
+
+Service는 Main Thread에서 실행됨. 사용자와 상호작용하지 않고 수행되는 Background 작업에 적합.
+
+### LiveData란
+Lifecycle에서 관찰 가능한 데이터 홀더 클래스. 
+
+### DataBinding이란
+프로그래매틱 방식이 아닌, 선언적 형식으로 레이아웃의 UI 구성요소를 앱의 데이터 소스와 결합할 수 있는 라이브러리.
+
 ### 저장소 (Q 이전)
 내부 저장소 (개별 앱 공간) :
  
@@ -156,6 +194,9 @@ Worker Thread : 네트워크 또는 데이터베이스 쿼리와 같이 오래 �
   접근 : MediaStore
   
   앱 삭제 시 : X
+
+### Application 클래스란
+
 
 ### ViewModel을 사용하는 이유
 UI에 보여지는 데이터를 수명주기에서 분리하여 저장하기 위해 만들어짐.
