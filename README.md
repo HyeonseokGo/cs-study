@@ -110,7 +110,7 @@ Squar의 오픈 소스 라이브러리. HTTP 통신. HTTP Method를 쉽게 구�
 ### 4대 컴포넌트
 Activity : UI를 담당하는 컴포넌트.
 
-Service : 백그라운드 작업을 실행하는 컴포넌트.
+Service : 백그라운드 작업을 실행하는 컴포넌트. Main Thread에서 실행됨.
 
 Broatcast Receiver : 기기에서 발생하는 다양한 이벤트, 정보를 받는 컴포넌트.
 
@@ -137,6 +137,11 @@ onDestroy() : Activity가 소멸되기 전에 호출됨.
 ### Context란
 현재 실행 중인 어플리케이션 또는 Activity에 대한 포괄적인 정보를 지닌 객체.
 
+### Intent
+명시적 Intent : 클래스 객체나 컴포넌트 이름을 지정하여 호출할 대상을 지정. 어플리케이션 내부에 사용.
+
+암시적 Intent : 호출할 대상이 달라질 수 있음. Ex) 메일, 인터넷 브라우저 선택 등.
+
 ### Content Provider와 Content Resolver의 차이
 Content Provider : 어플리케이션의 데이터를 공유하기 위한 것.
 
@@ -148,17 +153,25 @@ Main Thread (UI) : 액티비티와 컴포넌트의 사용을 담당하고 연동
 
 Worker Thread : 네트워크 또는 데이터베이스 쿼리와 같이 오래 걸리는 작업을 처리하는 Thread.
 
+### Lopper
+
 ### Handler란
+Thread의 메세지 큐에 메세지를 보내거나 수신된 메세지를 처리할 떄 사용됨. Runnable 객체를 전송할 수도 있다.
 
+Handler 객체를 생성한 Thread와 해상 Thread의 메세지 큐에 바인딩됨.
 
+### Runnable이란
+Thread간 메세지를 정의하고 전달하고 수신 후 식별하는 번거로운 과정을 줄이기 위해, 실행 코드를 전송하기 위한 것. 실행 코드가 담긴 객체.
 
 ### Android Service와 Intent Service 차이
+Android Service : UI 없이 실행 가능. 오래 걸리는 작업을 실행하기 위해 별도의 Thread 생성이 필요.
 
+IntentService : 별도의 Thread에서 동작. 오래 걸리지만 Main Thread와 관련 없는 작업.
 
 ### Service와 Thread의 차이점
-Thread는 Main Thread를 블락하지 않기 위한 작업 등으 처리. Foreground.
+Thread는 Main Thread를 블락하지 않기 위한 작업 등으 처리. Foreground. 앱 프로세스가 종료되면 종료.
 
-Service는 Main Thread에서 실행됨. 사용자와 상호작용하지 않고 수행되는 Background 작업에 적합.
+Service는 Main Thread에서 실행됨. 사용자와 상호작용하지 않고 수행되는 Background 작업에 적합. 앱 프로세스가 종료되면 시스템이 자동으로 재시작.
 
 ### LiveData란
 Lifecycle에서 관찰 가능한 데이터 홀더 클래스. 
@@ -203,7 +216,11 @@ Lifecycle에서 관찰 가능한 데이터 홀더 클래스.
   앱 삭제 시 : X
 
 ### Application 클래스란
-
+앱이 실행됨과 동시에 생성됨. Singleton. 각 컴포넌트에서 context를 이용한 접근이 가능.
 
 ### ViewModel을 사용하는 이유
 UI에 보여지는 데이터를 수명주기에서 분리하여 저장하기 위해 만들어짐.
+
+### Hilt란
+
+### Coroutine
