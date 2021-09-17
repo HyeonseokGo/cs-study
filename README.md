@@ -40,6 +40,8 @@ REST의 속성을 가지는 API.
 
 REST : Representational State Transfer의 약자. 웹 상의 자원들을 HTTP URI의 형태로 표현하고 URI 형식으로 HTTP Method(GET, POST, PUT, DELETE)를 통해 조작할 수 있는 아키텍처.
 
+### Clean Architecture란
+
 ## Kotlin
 
 ### Data Class
@@ -231,5 +233,8 @@ Lifecycle에서 관찰 가능한 데이터 홀더 클래스.
 UI에 보여지는 데이터를 수명주기에서 분리하여 저장하기 위해 만들어짐.
 
 ### Hilt란
+Dagger를 기반의 DI 라이브러리. 컴파일 시점에 어노테이션을 읽고 class 파일을 생성해 의존성을 주입.
+
+Dagger보다 러닝 커브가 낮음. 런타임 에러가 발생하는 Koin보다 안정성이 높음.
 
 ### Coroutine
