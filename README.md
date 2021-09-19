@@ -38,6 +38,8 @@ Stack : LIFO 방식으로 동작. 제거를 pop, 추가를 push라고 함.
 
 재사용과 확장에 용이. 캡슐화, 추상화, 다형성, 상속 등의 개념이 있음.
 
+### 함수형 프로그래밍이란
+
 ### SOLID 원칙
 단일 책임 원칙 : 한 클래스는 하나의 책임만 가져야함.
 
@@ -146,6 +148,8 @@ Squar의 오픈 소스 라이브러리. HTTP 통신. HTTP Method를 쉽게 구�
 
 ## Android
 
+### Dalvik란
+
 ### 4대 컴포넌트
 Activity : UI를 담당하는 컴포넌트.
 
@@ -169,6 +173,8 @@ onPause() : 시스템이 다른 Activity를 시작하기 직전에 호출됨. �
 onStop() : Activity가 더 이상 사용자에게 표시되지 않음. 아직 Activity 객체가 살아있음.
 
 onDestroy() : Activity가 소멸되기 전에 호출됨.
+
+### Doze 모드란
 
 ### AndroidManifest란
 어플리케이션에 관한 필수 정보를 안드로이드 플랫폼에게 알려줌.
@@ -203,7 +209,7 @@ Handler 객체를 생성한 Thread와 해상 Thread의 메세지 큐에 바인�
 Thread간 메세지를 정의하고 전달하고 수신 후 식별하는 번거로운 과정을 줄이기 위해, 실행 코드를 전송하기 위한 것. 실행 코드가 담긴 객체.
 
 ### Android Service와 Intent Service 차이
-Android Service : UI 없이 실행 가능. 오래 걸리는 작업을 실행하기 위해 별도의 Thread 생성이 필요.
+Android Service : Main Thread에서 동작. 오래 걸리는 작업을 실행하기 위해 별도의 Thread 생성이 필요.
 
 IntentService : 별도의 Thread에서 동작. 오래 걸리지만 Main Thread와 관련 없는 작업.
 
@@ -211,6 +217,8 @@ IntentService : 별도의 Thread에서 동작. 오래 걸리지만 Main Thread�
 Thread는 Main Thread를 블락하지 않기 위한 작업 등으 처리. Foreground. 앱 프로세스가 종료되면 종료.
 
 Service는 Main Thread에서 실행됨. 사용자와 상호작용하지 않고 수행되는 Background 작업에 적합. 앱 프로세스가 종료되면 시스템이 자동으로 재시작.
+
+### startService() bindService() 차이
 
 ### LiveData란
 Lifecycle에서 관찰 가능한 데이터 홀더 클래스. 
