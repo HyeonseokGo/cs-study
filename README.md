@@ -80,6 +80,9 @@ Stack : LIFO 방식으로 동작. 제거를 pop, 추가를 push라고 함.
 
 의존성 역전의 원칙 : 고수준 모듈은 저수준 모듈의 구현에 의존해서는 안 된다. Ex) 자동차는 바퀴에 의존하면 안 됨.
 
+### DI란
+의존성 주입은 객체를 스스로 생성하는 것이 아닌, 외부에서 주입받는 것.
+
 ### OAuth란
 
 ### Https란
@@ -142,12 +145,18 @@ wrapper 클래스 : 8개의 기본형을 객체 형식으로 다루기 위해 JD
 
 ### call by value, call by reference 차이
 
+### 직렬화란
+메모리에 존재하는 정보를 쉽게 전달하기 위해 byte 형태로 변환하는 것.
+
 ### Stream
 
 ### equals()란
 모든 자바 객체의 부모 객체인 Object 클래스에 정의되어 있음. Object에서 equals()는 각 객체가 참조하는 주소가 동일한지 검사하는 형태로 구현되어 있음. 객체의 비교에 사용할 때, 주소값이 아닌 객체의 값으로 비교하기 위해 재정의가 필요함. 재정의함으로써 Map의 Key와 Set의 원소로 사용 가능.
 
 ### equals()와 ==의 차이
+equals()는 객체의 값 비교, == 은 주소 비교
+
+kotlin에서는 == 이 내부적으로 equals() 호출. === 이 주소 비교.
 
 ### hashCode()란
 일반적으로 각 객체의 주소값을 반환함. 재정의가 되지 않았을 때 HashMap의 Key로 사용된다면, hashCode() 값이 달라 Key로 검색하지 못함.
@@ -178,6 +187,10 @@ List : 중복 허용. 순서 유지. List는 인터페이스로 구현체로는 
   LinkedList : Node와 Node를 연결하는 링크로 이루어짐. 데이터 추가/삭제 시 ArrayList보다 좋음. 하지만 검색 시 해당 노드까지 접근해야 하므로 성능 감소.
 
 Map : Key와 Value로 이루어짐. 순서 X. Key 중복 X.
+
+  HashMap : 중복된 Key 사용 시 기존 값 대체.
+
+  HashTable : Key를 해시함수로 계산하여 그 값을 배열의 인덱스로 사용. Thread-safe. null x. Hash 값 충돌 시 LinkedList 형태로 변환.
 
 ### OKHttp3
 Squar의 오픈 소스 라이브러리. HTTP 통신. HTTP Method를 쉽게 구현할 수 있음. 
@@ -226,14 +239,17 @@ onDestroy() : Activity가 소멸되기 전에 호출됨.
 ### Doze 모드란
 
 ### gradle이란
+유연성과 성능에 중점을 둔 오픈소스 빌드 자동화 도구.
 
 ### gradle implementation, api 차이
 
 ### AndroidManifest란
 어플리케이션에 관한 필수 정보를 안드로이드 플랫폼에게 알려줌.
 
+### SharedPrefrences란
+
 ### Context란
-현재 실행 중인 어플리케이션 또는 Activity에 대한 정보를 제공해주는 객체.
+현재 실행 중인 어플리케이션 또는 Activity에 대한 정보 가진 객체.
 
 ### Intent
 명시적 Intent : 클래스 객체나 컴포넌트 이름을 지정하여 호출할 대상을 지정. 어플리케이션 내부에 사용.
