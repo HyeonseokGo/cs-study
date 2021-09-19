@@ -80,6 +80,8 @@ Stack : LIFO 방식으로 동작. 제거를 pop, 추가를 push라고 함.
 
 의존성 역전의 원칙 : 고수준 모듈은 저수준 모듈의 구현에 의존해서는 안 된다. Ex) 자동차는 바퀴에 의존하면 안 됨.
 
+### OAuth란
+
 ### Https란
 패킷이 암호화 되어 있기 때문에 보안에 좋음.
 
@@ -138,11 +140,14 @@ wrapper 클래스 : 8개의 기본형을 객체 형식으로 다루기 위해 JD
 
 기본형 : 객체가 아님.
 
-### Stream
+### call by value, call by reference 차이
 
+### Stream
 
 ### equals()란
 모든 자바 객체의 부모 객체인 Object 클래스에 정의되어 있음. Object에서 equals()는 각 객체가 참조하는 주소가 동일한지 검사하는 형태로 구현되어 있음. 객체의 비교에 사용할 때, 주소값이 아닌 객체의 값으로 비교하기 위해 재정의가 필요함. 재정의함으로써 Map의 Key와 Set의 원소로 사용 가능.
+
+### equals()와 ==의 차이
 
 ### hashCode()란
 일반적으로 각 객체의 주소값을 반환함. 재정의가 되지 않았을 때 HashMap의 Key로 사용된다면, hashCode() 값이 달라 Key로 검색하지 못함.
@@ -157,6 +162,8 @@ String : 불변. 값이 수정될 때, 새로운 메모리 영역을 가리킴.
 StringBuffer : 가변. thread-safe.
 
 StringBuilder : 가변. 동기화 지원 X. 단일스레드에서 StringBuffer보다 좋은 성능.
+
+### 정규 표현식
 
 ### 인터페이스
 추상 클래스와 유사. 사용될 클래스가 어떤 메소드와 멤버를 가지는지에 대한 명세서. 클래스에서 구현.
@@ -237,6 +244,8 @@ onDestroy() : Activity가 소멸되기 전에 호출됨.
 Content Provider : 어플리케이션의 데이터를 공유하기 위한 것.
 
 Content Resolver : Content Provider에 접근할 때 사용하는 것.
+
+### proguard란
 
 ### 안드로이드 스튜디오의 Thread
 Main Thread (UI) : 액티비티와 컴포넌트의 사용을 담당하고 연동하는 역할. 시스템 콜백, 이벤트 또는 Lifecycle과 관련있는 것은 Main Thread에서 처리해야함.
