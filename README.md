@@ -347,7 +347,7 @@ Dagger를 기반의 DI 라이브러리. 컴파일 시점에 어노테이션을 �
 Dagger보다 러닝 커브가 낮음. 런타임 에러가 발생하는 Koin보다 안정성이 높음.
 
 ### Coroutine
-비 선점적 멀티태스킹을 위한 서브루틴을 일반화한 컴퓨터 프로그램 컴포넌트. 동시성 프로그래밍을 지원하는 kotlin의 기능.
+동시성 프로그래밍을 지원하는 kotlin의 기능. 서로 협력하는 루틴. 네트워크 처리 같은 비동기 처리에 사용됨.
 
 루틴 : 컴퓨터 프로그램에서 하나의 정리된 일. 보통 프로그램은 크고 작은 여러가지 루틴을 조합.
 
@@ -357,15 +357,22 @@ Dagger보다 러닝 커브가 낮음. 런타임 에러가 발생하는 Koin보�
 
 Coroutine : 메인-서브 개념이 없음. 루틴 진행 중 탈출, 다시 돌아와 나머지 루틴 수행 가능. 진입점과 탈출점이 여러개.
 
-### Scope란
+### CoroutineContext란
+Coroutine을 어떻게 처리할 것인지에 대한 여러가지 정보를 포함하는 인터페이스.
+
+### CoroutineScope란
+Coroutine Block을 생성. 하나의 CoroutineContext를 멤버 변수로 갖는 인터페이스.
 
 ### Job 이란
+launch() 함수에서 반환. Coroutine을 취소하거나 완료를 대기할 수 있음.
 
 ### launch란
+새로운 Coroutine 생성. Job 리턴
 
 ### async란
-동시에 수행할 수 있음. Deferred<T>를 리턴. 같은 scope에서 하나가 에러가 발생하면 나머지 자식에서 처리 실패. 
+새로운 Coroutine 생성. Deferred<T>를 리턴. 같은 scope에서 하나가 에러가 발생하면 나머지 자식에서 처리 실패. 
   
-Deferred를 사용해 원하는 시점에 결과를 return 받을 수 있음.
+Deferred는 await()를 사용해 사용해 원하는 시점에 결과를 return 받을 수 있음.
   
 ### suspend fun 이란
+Coroutine의 실행을 중지함. suspend 함수가 실행되는동안 Coroutine을 탈출, suspend 함수가 반환되면 다시 Coroutine을 재개한다.
