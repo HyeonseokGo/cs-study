@@ -125,7 +125,6 @@ Enum과의 차이점 : Enum은 Single Instance만 생성 가능.
 
 Lambda : 고차 함수에서 인수로 주어지는 식.
 
-
 ## Java
 
 ### GC란?
@@ -196,7 +195,6 @@ Map : Key와 Value로 이루어짐. 순서 X. Key 중복 X.
 Squar의 오픈 소스 라이브러리. HTTP 통신. HTTP Method를 쉽게 구현할 수 있음. 
 
 ### RxJava란
-
 
 ## Android
 
