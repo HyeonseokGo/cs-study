@@ -240,6 +240,9 @@ onDestroy() : Activity가 소멸되기 전에 호출됨.
 유연성과 성능에 중점을 둔 오픈소스 빌드 자동화 도구.
 
 ### gradle implementation, api 차이
+implementation : 의존 라이브러리 수정 시 본 모듈까지만 재빌드. A(impl) <- B <- C 의 상황에서 C는 A에 접근 X. A 수정 시 B까지 재빌드.
+
+api : 의존 라이브러리 수정 시 본 모듈을 의존하는 모든 모듈 재빌드. A(api) <- B <- C의 경우 C에서 A 접근 가능. A 수정 시 B, C 모두 재빌드.
 
 ### AndroidManifest란
 어플리케이션에 관한 필수 정보를 안드로이드 플랫폼에게 알려줌.
@@ -260,6 +263,7 @@ Content Provider : 어플리케이션의 데이터를 공유하기 위한 것.
 Content Resolver : Content Provider에 접근할 때 사용하는 것.
 
 ### proguard란
+코드 난독화 및 멀티덱스 방지 툴.
 
 ### 안드로이드 스튜디오의 Thread
 Main Thread (UI) : 액티비티와 컴포넌트의 사용을 담당하고 연동하는 역할. 시스템 콜백, 이벤트 또는 Lifecycle과 관련있는 것은 Main Thread에서 처리해야함.
@@ -365,12 +369,13 @@ Coroutine Block을 생성. 하나의 CoroutineContext를 멤버 변수로 갖는
 launch() 함수에서 반환. Coroutine을 취소하거나 완료를 대기할 수 있음.
 
 ### launch란
-새로운 Coroutine 생성. Job 리턴
+새로운 Coroutine 생성. Job 리턴.
 
 ### async란
-새로운 Coroutine 생성. Deferred<T>를 리턴. 같은 scope에서 하나가 에러가 발생하면 나머지 자식에서 처리 실패. 
+새로운 Coroutine 생성. Deferred<T>를 리턴. 같은 scope에서 하나가 에러가 발생하면 나머지 자식에서 처리 실패.
   
 Deferred는 await()를 사용해 사용해 원하는 시점에 결과를 return 받을 수 있음.
   
 ### suspend fun 이란
 Coroutine의 실행을 중지함. suspend 함수가 실행되는동안 Coroutine을 탈출, suspend 함수가 반환되면 다시 Coroutine을 재개한다.
+
