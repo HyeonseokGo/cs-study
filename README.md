@@ -181,15 +181,15 @@ Set : 중복 X, 순서 X
 
 List : 중복 허용. 순서 유지. List는 인터페이스로 구현체로는 ArrayList, LinkedList, Hash가 있음.
 
-  ArrayList : 내부적으로 Array 사용. 데이터 추가 시 해당 배열에 set. 연속된 메모리 공간 사용.
+    ArrayList : 내부적으로 Array 사용. 데이터 추가 시 해당 배열에 set. 연속된 메모리 공간 사용.
 
-  LinkedList : Node와 Node를 연결하는 링크로 이루어짐. 데이터 추가/삭제 시 ArrayList보다 좋음. 하지만 검색 시 해당 노드까지 접근해야 하므로 성능 감소.
+    LinkedList : Node와 Node를 연결하는 링크로 이루어짐. 데이터 추가/삭제 시 ArrayList보다 좋음. 하지만 검색 시 해당 노드까지 접근해야 하므로 성능 감소.
 
 Map : Key와 Value로 이루어짐. 순서 X. Key 중복 X.
 
-  HashMap : 중복된 Key 사용 시 기존 값 대체.
+    HashMap : 중복된 Key 사용 시 기존 값 대체.
 
-  HashTable : Key를 해시함수로 계산하여 그 값을 배열의 인덱스로 사용. Thread-safe. null x. Hash 값 충돌 시 LinkedList 형태로 변환.
+    HashTable : Key를 해시함수로 계산하여 그 값을 배열의 인덱스로 사용. Thread-safe. null x. Hash 값 충돌 시 LinkedList 형태로 변환.
 
 ### OKHttp3
 Squar의 오픈 소스 라이브러리. HTTP 통신. HTTP Method를 쉽게 구현할 수 있음. 
@@ -287,11 +287,15 @@ Android Service : Main Thread에서 동작. 오래 걸리는 작업을 실행하
 IntentService : 별도의 Thread에서 동작. 오래 걸리지만 Main Thread와 관련 없는 작업.
 
 ### Service와 Thread의 차이점
-Thread는 Main Thread를 블락하지 않기 위한 작업 등으 처리. Foreground. 앱 프로세스가 종료되면 종료.
+Thread : Main Thread를 블락하지 않기 위한 작업 등으 처리. Foreground. 앱 프로세스가 종료되면 종료.
 
-Service는 Main Thread에서 실행됨. 사용자와 상호작용하지 않고 수행되는 Background 작업에 적합. 앱 프로세스가 종료되면 시스템이 자동으로 재시작.
+Service : Main Thread에서 실행됨. 사용자와 상호작용하지 않고 수행되는 Background 작업에 적합. 앱 프로세스가 종료되면 시스템이 자동으로 재시작.
 
 ### startService() bindService() 차이
+
+startService() : Service 실행 후 직접적인 접근 X. 앱 종료 시에도 계속 실행.
+
+bindService() : Service 안의 onBind 메서드와  Service 인스턴스를 통해 통신 및 접근 가능. 종료 시 자동으로 unbind 처리.
 
 ### LiveData란
 Lifecycle에서 관찰 가능한 데이터 홀더 클래스. 
@@ -302,27 +306,27 @@ Lifecycle에서 관찰 가능한 데이터 홀더 클래스.
 ### 저장소 (Q 이전)
 내부 저장소 (개별 앱 공간) :
  
- 권한 : 필요 없음
+    권한 : 필요 없음
  
- 접근 : getFilesDir(), getCacheDir()
+    접근 : getFilesDir(), getCacheDir()
  
- 앱 삭제 시 제거 : O
+    앱 삭제 시 제거 : O
  
 외부 저장소 (개별 앱 공간) :
 
-  권한 : 필요 없음
+    권한 : 필요 없음, 다른 앱 저장소 접근 시 WRITE/READ_EXTERNAL_STORAGE
   
-  접근 : getExternalFilesDir(), getExternalCacheDir()
+    접근 : getExternalFilesDir(), getExternalCacheDir()
   
-  앱 삭제 시 제거 : O
+    앱 삭제 시 제거 : O
  
 외부 저장소 (공용 공간) :
   
-  권한 : WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE
+    권한 : WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE
   
-  접근 : getExternalStoragePublicDirectory()
+    접근 : getExternalStoragePublicDirectory()
   
-  앱 삭제 시 : X
+    앱 삭제 시 : X
   
 ### 저장소 (Q 이후)
 내부 저장소는 동일. 외부 저장소는 보안상의 이유로 다른 앱의 개별 공간에는 접근 X.
@@ -365,17 +369,18 @@ Coroutine을 어떻게 처리할 것인지에 대한 여러가지 정보를 포�
 ### CoroutineScope란
 Coroutine Block을 생성. 하나의 CoroutineContext를 멤버 변수로 갖는 인터페이스.
 
-### Job 이란
+### Job이란
 launch() 함수에서 반환. Coroutine을 취소하거나 완료를 대기할 수 있음.
 
 ### launch란
 새로운 Coroutine 생성. Job 리턴.
 
 ### async란
-새로운 Coroutine 생성. Deferred<T>를 리턴. 같은 scope에서 하나가 에러가 발생하면 나머지 자식에서 처리 실패.
-  
+새로운 Coroutine 생성. Deferred를 리턴. 같은 scope에서 하나가 에러가 발생하면 나머지 자식에서 처리 실패.
+
 Deferred는 await()를 사용해 사용해 원하는 시점에 결과를 return 받을 수 있음.
-  
-### suspend fun 이란
+
+### suspend fun이란
 Coroutine의 실행을 중지함. suspend 함수가 실행되는동안 Coroutine을 탈출, suspend 함수가 반환되면 다시 Coroutine을 재개한다.
 
+### Room이란
