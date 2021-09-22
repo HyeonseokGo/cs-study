@@ -244,6 +244,8 @@ implementation : 의존 라이브러리 수정 시 본 모듈까지만 재빌드
 
 api : 의존 라이브러리 수정 시 본 모듈을 의존하는 모든 모듈 재빌드. A(api) <- B <- C의 경우 C에서 A 접근 가능. A 수정 시 B, C 모두 재빌드.
 
+### minSdk, compileSdk, targetSdk
+
 ### AndroidManifest란
 어플리케이션에 관한 필수 정보를 안드로이드 플랫폼에게 알려줌.
 
