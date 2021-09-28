@@ -154,6 +154,10 @@ Enum과의 차이점 : Enum은 Single Instance만 생성 가능.
 
 Lambda : 고차 함수에서 인수로 주어지는 식.
 
+### crossline fun이란
+
+### inline fun
+
 ## Java
 
 ### GC란?
