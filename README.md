@@ -154,9 +154,17 @@ Enum과의 차이점 : Enum은 Single Instance만 생성 가능.
 
 Lambda : 고차 함수에서 인수로 주어지는 식.
 
+### inline class란
+
 ### crossline fun이란
 
-### inline fun
+### inline fun이란
+Kotlin을 디컴파일 했을 때, 고차함수의 인스턴스를 생성하지 않고 코드를 함수 내부에서 바로 실행하도록 함.
+
+인자로 전달받은 함수는 다른 함수로 전달 또는 참조가 불가능. noinline을 사용하여 해결 가능.
+
+### noinline이란
+inline으로 처리하고 싶지 않은 인자에 noinline 키워드를 붙여 제외할 수 있음.
 
 ## Java
 
