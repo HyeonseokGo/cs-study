@@ -406,6 +406,10 @@ UI에 보여지는 데이터를 수명주기에서 분리하여 저장하기 위
 
 ### Picasso vs Glide
 
+### RecyclerView vs ListView
+
+### ListAdapter란
+
 ### Hilt란
 Dagger를 기반의 DI 라이브러리. 컴파일 시점에 어노테이션을 읽고 class 파일을 생성해 의존성을 주입.
 
@@ -441,6 +445,8 @@ Deferred는 await()를 사용해 사용해 원하는 시점에 결과를 return 
 
 ### suspend fun이란
 Coroutine의 실행을 중지함. suspend 함수가 실행되는동안 Coroutine을 탈출, suspend 함수가 반환되면 다시 Coroutine을 재개한다.
+
+### lifecycleScope, viewModelScope, GlobalScope
 
 ### Room이란
 SQLite에 대한 추상화 레이어를 제공하여 원활한 데이터베이스 액세스를 지원하는 동시에 SQLite를 완벽히 활용.
