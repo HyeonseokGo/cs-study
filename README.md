@@ -28,6 +28,8 @@
 
 동기화 문제. 하나의 스레드에서 발생한 문제가 다른 스레드로 확산. 까다로운 디버깅.
 
+### 교착 상태란
+
 ### Queue와 Stack
 Queue : FIFO 방식으로 동작. 프로세스 처리, CPU 관리 등에 사용됨.
 
@@ -132,6 +134,8 @@ pivot을 설정하여 pivot보다 큰 값과 작은 값으로 분할하여 정�
 REST의 속성을 가지는 API.
 
 REST : Representational State Transfer의 약자. 웹 상의 자원들을 HTTP URI의 형태로 표현하고 URI 형식으로 HTTP Method(GET, POST, PUT, DELETE)를 통해 조작할 수 있는 아키텍처.
+
+### 공개 키 암호, 대칭 키 
 
 ### Clean Architecture란
 
