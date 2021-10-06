@@ -170,6 +170,8 @@ Kotlin을 디컴파일 했을 때, 고차함수의 인스턴스를 생성하지 
 ### noinline이란
 inline으로 처리하고 싶지 않은 인자에 noinline 키워드를 붙여 제외할 수 있음.
 
+### reified란
+
 ## Java
 
 ### GC란?
