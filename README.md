@@ -314,6 +314,8 @@ api : 의존 라이브러리 수정 시 본 모듈을 의존하는 모든 모듈
 
 ### SharedPrefrences란
 
+### SharedPrefrences commit과 apply 차이
+
 ### Context란
 현재 실행 중인 어플리케이션 또는 Activity에 대한 정보 가진 객체.
 
