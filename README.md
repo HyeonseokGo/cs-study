@@ -444,6 +444,8 @@ Coroutine을 어떻게 처리할 것인지에 대한 여러가지 정보를 포�
 ### CoroutineScope란
 Coroutine Block을 생성. 하나의 CoroutineContext를 멤버 변수로 갖는 인터페이스.
 
+### lifecycleScope, viewModelScope, GlobalScope
+
 ### Job이란
 launch() 함수에서 반환. Coroutine을 취소하거나 완료를 대기할 수 있음.
 
@@ -458,7 +460,9 @@ Deferred는 await()를 사용해 사용해 원하는 시점에 결과를 return 
 ### suspend fun이란
 Coroutine의 실행을 중지함. suspend 함수가 실행되는동안 Coroutine을 탈출, suspend 함수가 반환되면 다시 Coroutine을 재개한다.
 
-### lifecycleScope, viewModelScope, GlobalScope
+### Flow란
+
+### StateFlow, SharedFlow란
 
 ### Room이란
 SQLite에 대한 추상화 레이어를 제공하여 원활한 데이터베이스 액세스를 지원하는 동시에 SQLite를 완벽히 활용.
