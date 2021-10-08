@@ -256,6 +256,8 @@ Squar의 오픈 소스 라이브러리. HTTP 통신. HTTP Method를 쉽게 구�
 
 Reactive programming 패러다임을 자바에서 구현한 라이브러리. 비동기 프로그래밍, 함수형 프로그래밍 기법 사용. 데이터를 생산하는 Observable와 소비하는 Subscriber.
 
+### RxJava Single, Flowable, Maybe, Completable이란
+
 ## Android
 
 ### Dalvik란
