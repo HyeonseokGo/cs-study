@@ -334,6 +334,8 @@ Content Resolver : Content Provider에 접근할 때 사용하는 것.
 ### proguard란
 코드 난독화 및 멀티덱스 방지 툴.
 
+### consumerProguardFile
+
 ### 안드로이드 스튜디오의 Thread
 Main Thread (UI) : 액티비티와 컴포넌트의 사용을 담당하고 연동하는 역할. 시스템 콜백, 이벤트 또는 Lifecycle과 관련있는 것은 Main Thread에서 처리해야함.
 다른 작업에 의해 Main Thread가 지연된다면 ANR이 발생.
