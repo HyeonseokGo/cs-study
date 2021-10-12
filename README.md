@@ -161,6 +161,8 @@ when을 사용할 때, else 없이 사용할 수 있음.
 
 Enum과의 차이점 : Enum은 Single Instance만 생성 가능.
 
+### object란
+
 ### Lambda와 고차 함수
 고차 함수 : 함수를 인수로 받거나, 함수를 리턴하는 함수.
 
@@ -236,10 +238,12 @@ StringBuffer : 가변. thread-safe.
 
 StringBuilder : 가변. 동기화 지원 X. 단일스레드에서 StringBuffer보다 좋은 성능.
 
-### 정규 표현식
+### 정규 표현식이란
 
 ### 인터페이스
 추상 클래스와 유사. 사용될 클래스가 어떤 메소드와 멤버를 가지는지에 대한 명세서. 클래스에서 구현.
+
+### Array와 List의 차이
 
 ### 컬렉션의 종류
 Set : 중복 X, 순서 X
@@ -255,6 +259,8 @@ Map : Key와 Value로 이루어짐. 순서 X. Key 중복 X.
     HashMap : 중복된 Key 사용 시 기존 값 대체.
 
     HashTable : Key를 해시함수로 계산하여 그 값을 배열의 인덱스로 사용. Thread-safe. null x. Hash 값 충돌 시 LinkedList 형태로 변환.
+
+### Hash Collision이란
 
 ### OKHttp3
 Squar의 오픈 소스 라이브러리. HTTP 통신. HTTP Method를 쉽게 구현할 수 있음. 
@@ -481,6 +487,10 @@ Coroutine의 실행을 중지함. suspend 함수가 실행되는동안 Coroutine
 
 ### Room이란
 SQLite에 대한 추상화 레이어를 제공하여 원활한 데이터베이스 액세스를 지원하는 동시에 SQLite를 완벽히 활용.
+
+### Jetpack이란
+
+### AAC란
 
 ## Git
 
