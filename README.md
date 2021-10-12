@@ -172,6 +172,8 @@ inline으로 처리하고 싶지 않은 인자에 noinline 키워드를 붙여 �
 
 ### reified란
 
+### by lazy, lateinit var 
+
 ## Java
 
 ### GC란?
