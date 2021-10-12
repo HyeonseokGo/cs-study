@@ -66,7 +66,7 @@ Stack : LIFO 방식으로 동작. 제거를 pop, 추가를 push라고 함.
 
 ### 이진탐색트리란
 
-### 레드블랙 트리
+### 레드블랙 트리란
 
 ### 선택 정렬
 첫번째 값을 두 번째 값부터 마지막까지 차례대로 비교하여 가장 작은 값을 찾아 첫번째에 놓고, 두번째와 이후 또한 이전과 같이 반복하여 정렬.
@@ -183,6 +183,10 @@ inline으로 처리하고 싶지 않은 인자에 noinline 키워드를 붙여 �
 ### reified란
 
 ### by lazy, lateinit var 
+
+by lazy : 호출 시점에 초기화. val만 사용 가능. immutable함. 기본 synchronized로 동작.
+
+lateinit var : var만 사용 가능. mutable함. non-null. 초기화 전에 접근 시 Exception을 throw. setter/getter 정의 불가능. 원시 타입에서 사용 불가능.
 
 ## Java
 
@@ -338,6 +342,12 @@ implementation : 의존 라이브러리 수정 시 본 모듈까지만 재빌드
 api : 의존 라이브러리 수정 시 본 모듈을 의존하는 모든 모듈 재빌드. A(api) <- B <- C의 경우 C에서 A 접근 가능. A 수정 시 B, C 모두 재빌드.
 
 ### minSdk, compileSdk, targetSdk
+
+minSdk : 앱이 지원하는 가장 낮은 버전.
+
+compileSdk : 컴파일 때 gradle이 사용할 안드로이드 sdk 버전. 해당 버전에 포함된 API 사용 가능.
+
+targetSdk : minSdk 이상에서 지원하는 특정 기능을 사용하기 위함. 컴파일에 관여 X. 해당 버전까지 동작을 보장함.
 
 ### AndroidManifest란
 어플리케이션에 관한 필수 정보를 안드로이드 플랫폼에게 알려줌.
