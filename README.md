@@ -162,6 +162,9 @@ when을 사용할 때, else 없이 사용할 수 있음.
 Enum과의 차이점 : Enum은 Single Instance만 생성 가능.
 
 ### object란
+kotlin 키워드 중 하나. java의 static을 대체. 싱글톤, 익명 클래스, companion object에 사용됨.
+
+object 키워드로 싱글톤 클래스 선안. 상속 가능. 생성자 선언 불가능.
 
 ### Lambda와 고차 함수
 고차 함수 : 함수를 인수로 받거나, 함수를 리턴하는 함수.
