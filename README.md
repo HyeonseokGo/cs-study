@@ -509,6 +509,11 @@ Deferred는 await()를 사용해 사용해 원하는 시점에 결과를 return 
 Coroutine의 실행을 중지함. suspend 함수가 실행되는동안 Coroutine을 탈출, suspend 함수가 반환되면 다시 Coroutine을 재개한다.
 
 ### Flow란
+단일 값만 반환하는 suspend fun과 달리 여러 값을 순차적으로 내보낼 수 있는 것. Rx와 비슷함.
+
+생산자가 값을 생산, 소비자가 사용.
+
+### Hot Flow, Cold Flow란.
 
 ### StateFlow, SharedFlow란
 
