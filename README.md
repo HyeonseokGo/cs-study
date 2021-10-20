@@ -125,7 +125,7 @@ pivot을 설정하여 pivot보다 큰 값과 작은 값으로 분할하여 정�
 
 ### 어댑터 패턴이란
 
-### 빌더 
+### 빌더 패턴이란
 
 ### OAuth란
 다양한 플랫폼 환경에서 권한 부여를 위한 산업 표준 프로토콜.
@@ -200,6 +200,8 @@ inline으로 처리하고 싶지 않은 인자에 noinline 키워드를 붙여 �
 by lazy : 호출 시점에 초기화. val만 사용 가능. immutable함. 기본 synchronized로 동작.
 
 lateinit var : var만 사용 가능. mutable함. non-null. 초기화 전에 접근 시 Exception을 throw. setter/getter 정의 불가능. 원시 타입에서 사용 불가능.
+
+### synchronized란
 
 ## Java
 
