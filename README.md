@@ -534,8 +534,16 @@ Coroutine의 실행을 중지함. suspend 함수가 실행되는동안 Coroutine
 SQLite에 대한 추상화 레이어를 제공하여 원활한 데이터베이스 액세스를 지원하는 동시에 SQLite를 완벽히 활용.
 
 ### Jetpack이란
+개발자가 관심 있는 코드에 집중할 수 있도록 권장사항 준수, 상용구 코드 제거, 모든 Android 버전과 기기에서 일관되게 작동하는 코드 작성을 돕는 라이브러리 모음.
+
+Support Library의 개선 버전. androidx 패키지를 사용함.
+
+AAC를 포함하여, CameraX, Hilt 등이 있음.
 
 ### AAC란
+AAC : Jetpack의 구성요소. 안드로이드 아키텍처 컴포넌트. 강력하고 테스트와 유지관리가 쉬운 앱을 디자인하도록 돕는 라이브러리 모음.
+
+구성 요소로는 ViewModel, LiveData, WorkManager, Paging, DataSource 등이 있음.
 
 ## Git
 
