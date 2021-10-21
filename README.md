@@ -548,3 +548,16 @@ AAC : Jetpack의 구성요소. 안드로이드 아키텍처 컴포넌트. 강력
 ## Git
 
 ### git이란
+오픈소스 버전 관리 시스템.
+
+### commit이란
+
+### pull이란
+
+### fetch란
+
+### push란
+
+### merge란
+
+### rebase
