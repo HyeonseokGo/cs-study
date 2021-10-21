@@ -201,8 +201,6 @@ by lazy : 호출 시점에 초기화. val만 사용 가능. immutable함. 기본
 
 lateinit var : var만 사용 가능. mutable함. non-null. 초기화 전에 접근 시 Exception을 throw. setter/getter 정의 불가능. 원시 타입에서 사용 불가능.
 
-### synchronized란
-
 ## Java
 
 ### GC란?
@@ -295,6 +293,11 @@ Map : Key와 Value로 이루어짐. 순서 X. Key 중복 X.
 
 ### OKHttp3
 Squar의 오픈 소스 라이브러리. HTTP 통신. HTTP Method를 쉽게 구현할 수 있음. 
+
+### synchronized란
+멀티 스레드 문제를 해결하기 위한 방법 중 하나. 함수 또는 블럭의 형태로 사용 가능.
+
+프로그램 성능 저하의 우려가 있음.
 
 ### RxJava란
 관측 가능한 스트림을 사용한 비동기 프로그래밍용 API.
