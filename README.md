@@ -430,6 +430,10 @@ bindService() : Service 안의 onBind 메서드와  Service 인스턴스를 통�
 ### LiveData란
 Lifecycle에서 관찰 가능한 데이터 홀더 클래스. 
 
+### Fragment에서 LiveData를 관찰할 때 viewLifecycleOwner를 사용하는 이유
+Activity와 다르게 Fragment는 Fragment 자체의 Lifecycle과 Fragment View의 Lifecycle이 구분되어 있는데, Fragment의 LifecycleOwner를 사용하여 LiveData를 관찰하게 되면
+Fragment를 이동하거나 돌아왔을 때 onDestroy가 호출되지 않아 Observer가 중복으로 등록되는 문제가 발생한다. Fragment View의 LifecycleOwner를 사용하면 onDestroyView에서 Observer가 제거되어 안전하게 사용할 수 있다.
+
 ### DataBinding이란
 프로그래매틱 방식이 아닌, 선언적 형식으로 레이아웃의 UI 구성요소를 앱의 데이터 소스와 결합할 수 있는 라이브러리.
 
