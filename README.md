@@ -228,8 +228,6 @@ call by value : 인자로 받은 값을 복사하여 처리.
 
 call by reference : 인자로 받은 값의 주소를 참조하여 값을 직접 조작.
 
-자바에서 기본 자료형은 call by value, 참조 자료형(Array, 클래스 인스턴스) 등은 call by reference.
-
 ### 직렬화란
 메모리에 존재하는 정보를 쉽게 전달하기 위해 byte 형태로 변환하는 것.
 
